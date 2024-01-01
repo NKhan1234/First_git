@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DynaPuff&family=Josefin+Sans:wght@300&family=Kurale&family=Lora&family=Montserrat:wght@400;500&family=Nerko+One&family=Noto+Sans+Mono:wght@300&family=Open+Sans&family=Oswald:wght@300&family=Poppins:wght@400;500&family=Raleway&family=Roboto+Mono&family=Roboto:wght@400;500&family=Rubik+Distressed&family=Sono&family=Stylish&family=Ubuntu&family=Zen+Dots&display=swap');
+@import "../../node_modules/swiper/swiper-bundle.css";
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Chivo Mono', monospace;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --body-color:rgb(255, 255, 255);
+    --text-color:rgb(11, 11, 11);
+    --first-color:#816293;
+    --second-color:#100900c5;
+    --other-color:rgb(150, 150, 150);
+    --third-color:hsla(228, 96%, 18%, 0.1);
+    --four-color:rgba(255, 123, 0, 0.339);
+    --fifth-color:hsla(228, 66%, 45%, 0.1);
+    --six-color:rgb(236, 236, 236);
+}
+body{
+    background: var(--body-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 12px 10%;
+    width: 100%;
+    background: transparent;
+    transition: all .38s ease;
+}
+.logo{
+    column-gap: 4px;
+    display: inline-flex;
+    align-items: center;
+
+}
+.logo a{
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    transition: color .3s;
+
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    position: relative;
+    padding: 0px 10px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+.navbar a:after{
+    position: absolute;
+    content: "";
+    background: var(--second-color);
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+.navbar a:hover:after{
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+.icon li {
+    background:transparent;
+    padding: 5px 8px;
+    border: 1px solid var(--text-color);
+
+}
+.icon a{
+    background:transparent;
+    color: var(--text-color);
+    border-radius:21px;
+    padding: 4px 12px;
+    column-gap: 7px;
+    display: inline-block;
+}
+section{
+    padding: 100px 10%;
+}
+#menu-icon{
+    column-gap: 6px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+
+
+
+.change-theme{
+    cursor: pointer;
+}
+body.dark-theme{
+    --body-color:rgb(31, 31, 31);
+    --text-color:rgb(236, 233, 233);
+    /* --first-color:rgb(176, 176, 176);
+    --second-color:#6e6d6d;
+    --other-color:rgb(69, 69, 69);
+    --third-color:hsla(0, 0%, 11%, 0.1); */
+}
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom:-30%;
+    background: var(--first-color);
+    color: var(--text-color);
+    display: inline-flex;
+    padding: .35rem;
+    border-radius: .15rem;
+    font-size: 1.24rem;
+    z-index: 100;
+    opacity: .9;
+}
+.logo img{
+    width: 30px;
+}
+.scrollup:hover{
+    opacity: .8;
+    transform: translateY(-.25rem);
+}
+.show-scroll{
+    bottom: 4.5rem;
+}
+.scroll-header{
+    background: var(--second-color);
+    box-shadow: 0 1px 6px var(--third-color);
+
+}
+.scroll-header .logo a,
+.scroll-header .navbar a,
+.scroll-header .icon a{
+    color: var(--body-color);
+}
+.history{
+    background:linear-gradient(to left, rgba(143, 111, 222, 0.6), #af8383);
+    background-position : bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* height: 100vh; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+.his-img img{
+    width: 100px;
+    border-radius: 5px;
+}
+.his p{
+    background: var(--first-color);
+    padding: 1.5rem 2rem;
+    border-radius: 9px;
+}

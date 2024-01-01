@@ -1,0 +1,82 @@
+extends base.pug
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/swiper-bundle.min.css
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+block content
+    header#header 
+        .navbar 
+            .nav
+                li #[a(href='/') Home]
+                li #[a(href='/about') About]
+                
+                li #[a(href='/contact') Contact]
+            
+        .logo 
+            img(src="/static/img/logoi.png")
+            li #[a(href='/') NK School] 
+        .icon 
+            a <i class='bx bx-moon change-theme' id='theme-button'></i>
+                //- .tom-1
+                //-     .tom
+                //-         .tom_sun 
+                //-             a Light 
+                //-             a <i class='bx bx-moon change-theme' id='theme-button'></i>
+                //-         .tom_moon
+                //-             a Dark 
+                //-             a <i class='bx bx-sun change-theme' id='theme-button'></i>
+            a <i class='bx bx-menu' id='menu-icon'></i>
+    section.home
+        .home-text 
+            h1 Our School 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusantium laudantium aspernatur animi quia, deserunt quos. Tenetur doloremque ullam debitis.
+            button  #[a(href='/explore' class='btn1') Explore] 
+
+    section.about 
+        .about-head 
+            h2 About
+        .about-img 
+            img(src="/static/img/ms1.jpg", alt="")
+        .about-text 
+            h2 About Our School History.. 
+            button  #[a(href='/history' class='btn1') History] 
+
+
+    section.popular.section#popular 
+        h2.section__title Our Lovely Childrens 
+        div.popular__container.container.swiper 
+            div.swiper-wrapper
+                article.popular__card.swiper-slide 
+                    img(src="/static/img/child1.jpg")
+                    
+                article.popular__card.swiper-slide 
+                    img(src="/static/img/child2.jpg")
+                    
+                article.popular__card.swiper-slide 
+                    img(src="/static/img/child3.jpg")
+                    
+                article.popular__card.swiper-slide 
+                    img(src="/static/img/child4.jpg")
+                    
+                article.popular__card.swiper-slide 
+                    img(src="/static/img/child5.jpg")
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div> 
+
+
+
+    a(href="#" class="scrollup" id="scroll-up") 
+        <i class='bx bx-chevron-up'></i>
+
+
+    block scripts 
+        script(src="/static/index.js")
+        script(src="/static/swiper-bundle.min.js")
+        //- script(src="/static/mixitup.min.js")

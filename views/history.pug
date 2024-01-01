@@ -1,0 +1,40 @@
+extends base.pug
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/historystyle.css
+    //-   include ../static/swiper-bundle.min.css
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+block content
+    header#header 
+        ul.navbar 
+            li #[a(href='/') Home]
+            li #[a(href='/about') About]
+            
+            li #[a(href='/contact') Contact]
+        div.logo 
+            img(src="/static/img/logoi.png")
+            li #[a(href='/') Logo] 
+        div.icon 
+            a <i class='bx bx-moon change-theme' id='theme-button'></i>
+            
+            a <i class='bx bx-menu' id='menu-icon'></i>
+    section.history
+        .his-img 
+            img(src="/static/img/ms.jpg") 
+        .his 
+            p "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est at ducimus similique dolorum? Itaque delectus repellat ab dignissimos accusantium, explicabo voluptate officia rerum distinctio assumenda dolore, quam quae aspernatur error? Non reprehenderit beatae illum optio eius, ab dolorem accusantium consequuntur asperiores qui, temporibus fuga sunt facilis corrupti ea vero mollitia ad magni. Totam perferendis, odio commodi nisi aperiam aspernatur numquam facere non consequatur assumenda adipisci dolorem quaerat repellat esse voluptate in laudantium eligendi neque magni reprehenderit at tempore iure nihil. Hic delectus corrupti exercitationem impedit quo assumenda, dolore eos numquam magnam aperiam perspiciatis, eius commodi quidem libero dolorem. Provident, molestiae nihil similique inventore ducimus dolore iure temporibus animi atque, officiis consequatur delectus quod ullam architecto voluptatibus quisquam eligendi, corrupti velit? Nihil quisquam expedita veniam, quod facilis temporibus beatae earum veritatis impedit ex neque aliquid? Obcaecati incidunt perferendis sint vitae suscipit harum praesentium nemo ea aliquam quo. Est eum provident amet dignissimos veritatis voluptatibus tenetur. Necessitatibus ipsa incidunt animi explicabo reiciendis odit aspernatur? Cum id, porro labore iusto voluptatum rerum aut ad magni quasi maiores veniam, beatae accusamus. Dicta ad nulla, architecto cupiditate ab rem quaerat dolore pariatur maxime delectus aspernatur nesciunt officiis sit doloribus eveniet, maiores cumque repellat culpa necessitatibus nihil fugiat impedit? Distinctio sunt praesentium et eum ipsa hic odio fugit, laboriosam, amet maxime molestiae reprehenderit velit earum quasi delectus, inventore cumque enim debitis! Quas facilis asperiores eum ea et voluptatibus, pariatur adipisci ab? Doloribus autem hic corporis, soluta temporibus, unde animi, placeat omnis voluptate pariatur eum necessitatibus nostrum possimus provident? Veniam numquam sapiente, voluptate cum labore facilis inventore iste odit optio voluptates esse quae beatae nam eius, aliquam dolor. Fugiat provident sapiente corrupti quidem, voluptatum maxime in quos beatae quod molestiae molestias, recusandae aliquid excepturi ipsam enim nesciunt, ab dicta."
+    
+
+
+    a(href="#" class="scrollup" id="scroll-up") 
+        <i class='bx bx-chevron-up'></i>
+
+
+
+    block scripts 
+        script(src="/static/index.js")

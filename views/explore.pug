@@ -1,0 +1,44 @@
+extends base.pug
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/explorestyle.css
+    //-   include ../static/swiper-bundle.min.css
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+block content
+    header#header 
+        ul.navbar 
+            li #[a(href='/') Home]
+            li #[a(href='/about') About]
+            
+            li #[a(href='/contact') Contact]
+        div.logo 
+            img(src="/static/img/logoi.png")
+            li #[a(href='/') Logo] 
+        div.icon 
+            a <i class='bx bx-moon change-theme' id='theme-button'></i>
+            
+            a <i class='bx bx-menu' id='menu-icon'></i>
+    section.explore 
+        .ex-img 
+            .ex1 
+                img(src="/static/img/ms.jpg")
+            .ex2 
+                img(src="/static/img/ms1.jpg")
+                img(src="/static/img/mlogo.jpg")
+
+
+
+
+
+    a(href="#" class="scrollup" id="scroll-up") 
+        <i class='bx bx-chevron-up'></i>
+
+
+
+    block scripts 
+        script(src="/static/index.js")
